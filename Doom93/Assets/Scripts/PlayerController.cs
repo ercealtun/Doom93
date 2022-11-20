@@ -4,6 +4,8 @@ using Cursor = UnityEngine.Cursor;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController instance;
+    
     public Rigidbody2D theRB;
 
     public float moveSpeed = 5f;
@@ -17,6 +19,13 @@ public class PlayerController : MonoBehaviour
 
     public GameObject bulletImpact;
     public int currentAmmo;
+
+    public Animator gunAnim;
+
+    void Awake()
+    {
+        instance = this;
+    }
     
     void Start()
     {
@@ -68,6 +77,7 @@ public class PlayerController : MonoBehaviour
                     Debug.Log("Player looking at nothing");
                 }
                 currentAmmo--;
+                gunAnim.SetTrigger("Shoot");
             }
 
         }
