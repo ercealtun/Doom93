@@ -22,6 +22,11 @@ public class PlayerController : MonoBehaviour
 
     public Animator gunAnim;
 
+    public int currentHealth;
+    public int maxHealth = 100;
+    public GameObject deadScreen;
+    private bool hasDied = false;
+
     void Awake()
     {
         instance = this;
@@ -30,62 +35,95 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        currentHealth = maxHealth;
     }
-
 
     void Update()
     {
-        // Player movement control
-        moveInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-
-        Vector3 moveHorizontal = transform.up * -moveInput.x;
-
-        Vector3 moveVertical = transform.right * moveInput.y;
-
-        theRB.velocity = (moveHorizontal + moveVertical) * moveSpeed;
-
-        // Player view control
-        mouseInput = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y")) * mouseSensitivity;
-
-        transform.rotation = Quaternion.Euler(
-            transform.rotation.eulerAngles.x,
-            transform.rotation.eulerAngles.y,
-            transform.rotation.eulerAngles.z - mouseInput.x
-        );
-
-        //  Player's up and down angle range settling
-        float maxAngle = 180;
-        float minAngle = 0;
-        Vector3 RotationAmount = viewCam.transform.localRotation.eulerAngles + new Vector3(0f, mouseInput.y, 0f);
-        viewCam.transform.localRotation = Quaternion.Euler(RotationAmount.x, Mathf.Clamp(RotationAmount.y, minAngle, maxAngle),
-            RotationAmount.z);
-        
-        // Shooting
-        if (Input.GetMouseButtonDown(0))
+        if (!hasDied)
         {
-            if (currentAmmo > 0)
+            // Player movement control
+            moveInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+    
+            Vector3 moveHorizontal = transform.up * -moveInput.x;
+    
+            Vector3 moveVertical = transform.right * moveInput.y;
+    
+            theRB.velocity = (moveHorizontal + moveVertical) * moveSpeed;
+    
+            // Player view control
+            mouseInput = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y")) * mouseSensitivity;
+    
+            transform.rotation = Quaternion.Euler(
+                transform.rotation.eulerAngles.x,
+                transform.rotation.eulerAngles.y,
+                transform.rotation.eulerAngles.z - mouseInput.x
+            );
+    
+            //  Player's up and down angle range settling
+            float maxAngle = 180;
+            float minAngle = 0;
+            Vector3 RotationAmount = viewCam.transform.localRotation.eulerAngles + new Vector3(0f, mouseInput.y, 0f);
+            viewCam.transform.localRotation = Quaternion.Euler(RotationAmount.x, Mathf.Clamp(RotationAmount.y, minAngle, maxAngle),
+                RotationAmount.z);
+            
+            // Shooting
+            if (Input.GetMouseButtonDown(0))
             {
-                Ray ray = viewCam.ViewportPointToRay(new Vector3(.5f, .5f, 0f));
-                RaycastHit hit;
-                if (Physics.Raycast(ray, out hit))
+                if (currentAmmo > 0)
                 {
-                    //Debug.Log("Player looking at " + hit.transform.name);
-                    Instantiate(bulletImpact, hit.point, transform.rotation);
-
-                    if (hit.transform.tag == "Enemy")
+                    Ray ray = viewCam.ViewportPointToRay(new Vector3(.5f, .5f, 0f));
+                    RaycastHit hit;
+                    if (Physics.Raycast(ray, out hit))
                     {
-                        hit.transform.parent.GetComponent<EnemyController>().TakeDamage();
+                        //Debug.Log("Player looking at " + hit.transform.name);
+                        Instantiate(bulletImpact, hit.point, transform.rotation);
+    
+                        if (hit.transform.tag == "Enemy")
+                        {
+                            hit.transform.parent.GetComponent<EnemyController>().TakeDamage();
+                        }
                     }
+                    else
+                    {
+                        //Debug.Log("Player looking at nothing");
+                    }
+                    currentAmmo--;
+                    gunAnim.SetTrigger("Shoot");
                 }
-                else
-                {
-                    Debug.Log("Player looking at nothing");
-                }
-                currentAmmo--;
-                gunAnim.SetTrigger("Shoot");
             }
-
         }
-        
+        else
+        {
+            unlockCursorEvent();
+        }
     }
+
+    public void TakeDamage(int damageAmount)
+    {
+        currentHealth -= damageAmount;
+
+        if (currentHealth <= 0)
+        {
+            deadScreen.SetActive(true);
+            hasDied = true;
+        }
+    }
+
+    public void AddHealth(int healAmount)
+    {
+        currentHealth += healAmount;
+        if (currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+    }
+
+    public void unlockCursorEvent()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Debug.Log("Cursor unlocked");
+    }
+    
+
 }
