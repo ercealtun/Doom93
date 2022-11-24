@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.UIElements;
-using Cursor = UnityEngine.Cursor;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -21,11 +21,14 @@ public class PlayerController : MonoBehaviour
     public int currentAmmo;
 
     public Animator gunAnim;
+    public Animator anim;
 
     public int currentHealth;
     public int maxHealth = 100;
     public GameObject deadScreen;
     private bool hasDied = false;
+
+    public Text healthText, ammoText;
 
     void Awake()
     {
@@ -34,8 +37,10 @@ public class PlayerController : MonoBehaviour
     
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
         currentHealth = maxHealth;
+        healthText.text = currentHealth.ToString() + "%";
+
+        ammoText.text = currentAmmo.ToString();
     }
 
     void Update()
@@ -90,12 +95,13 @@ public class PlayerController : MonoBehaviour
                     }
                     currentAmmo--;
                     gunAnim.SetTrigger("Shoot");
+                    UpdateAmmoUI();
                 }
             }
-        }
-        else
-        {
-            unlockCursorEvent();
+
+            if (moveInput != Vector2.zero) { anim.SetBool("isMoving",true); }
+            else { anim.SetBool("isMoving",false); }
+            
         }
     }
 
@@ -107,7 +113,11 @@ public class PlayerController : MonoBehaviour
         {
             deadScreen.SetActive(true);
             hasDied = true;
+            currentHealth = 0;
         }
+        
+        healthText.text = currentHealth.ToString() + "%";
+        
     }
 
     public void AddHealth(int healAmount)
@@ -117,13 +127,14 @@ public class PlayerController : MonoBehaviour
         {
             currentHealth = maxHealth;
         }
+        
+        healthText.text = currentHealth.ToString() + "%";
     }
 
-    public void unlockCursorEvent()
+
+    public void UpdateAmmoUI()
     {
-        Cursor.lockState = CursorLockMode.None;
-        Debug.Log("Cursor unlocked");
+        ammoText.text = currentAmmo.ToString();
     }
-    
 
 }
