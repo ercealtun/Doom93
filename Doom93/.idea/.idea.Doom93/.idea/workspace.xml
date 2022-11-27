@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b39133fe-7c43-44f9-bdfe-b6cd50660ac6" name="Changes" comment="" />
+    <list default="true" id="b39133fe-7c43-44f9-bdfe-b6cd50660ac6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Doom93/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Doom93/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GPJ FPS Assets/Art/Tiles/FPS_Tiles_2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GPJ FPS Assets/Art/Tiles/FPS_Tiles_2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GPJ FPS Assets/Art/Tiles/FPS_Tiles_3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GPJ FPS Assets/Art/Tiles/FPS_Tiles_3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GPJ FPS Assets/Art/Tiles/FPS_Tiles_4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GPJ FPS Assets/Art/Tiles/FPS_Tiles_4.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,6 +59,8 @@
       <workItem from="1669055941575" duration="2933000" />
       <workItem from="1669135359247" duration="6784000" />
       <workItem from="1669304749364" duration="4371000" />
+      <workItem from="1669400299856" duration="599000" />
+      <workItem from="1669540167824" duration="1980000" />
     </task>
     <servers />
   </component>
