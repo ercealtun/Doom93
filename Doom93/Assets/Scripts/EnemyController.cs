@@ -57,6 +57,12 @@ public class EnemyController : MonoBehaviour
         {
             Destroy(gameObject);
             Instantiate(explosion, transform.position, transform.rotation);
+            
+            AudioController.instance.PlayEnemyDead();
+        }
+        else
+        {
+            AudioController.instance.PlayEnemyShot();
         }
         
     }

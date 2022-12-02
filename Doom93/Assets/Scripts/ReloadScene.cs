@@ -19,6 +19,7 @@ public class ReloadScene : MonoBehaviour
 
     public void ResetScene()
     {
+        Debug.Log("Reloaded scene");
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

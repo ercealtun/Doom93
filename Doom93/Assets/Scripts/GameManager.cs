@@ -1,9 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    private bool tryToResume;
+    private void Awake()
+    {
+        LockCursor();
+    }
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -13,9 +20,21 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape)) { UnlockCursor(); }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+
+            if (!tryToResume) // Trying to unlock
+            {
+                UnlockCursor();
+                tryToResume = true;
+            }
+            else // Trying to lock
+            {
+                LockCursor();
+                tryToResume = false;
+            }
+        }
         
-        if(Input.GetMouseButton(0)){ LockCursor(); }
 
         
     }

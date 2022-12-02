@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
     public int currentHealth;
     public int maxHealth = 100;
     public GameObject deadScreen;
-    private bool hasDied = false;
+    public bool hasDied = false;
 
     public Text healthText, ammoText;
 
@@ -88,6 +88,9 @@ public class PlayerController : MonoBehaviour
                         {
                             hit.transform.parent.GetComponent<EnemyController>().TakeDamage();
                         }
+                        
+                        AudioController.instance.PlayGunShot();
+                        
                     }
                     else
                     {
@@ -117,7 +120,9 @@ public class PlayerController : MonoBehaviour
         }
         
         healthText.text = currentHealth.ToString() + "%";
-        
+
+        if (!hasDied) { AudioController.instance.PlayPlayerHurt(); }
+
     }
 
     public void AddHealth(int healAmount)
