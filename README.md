@@ -12,4 +12,6 @@
 ## In-game shot
 
 <img src="/Doom93/Assets/Images/in-game.png">
+
+## Dead Screen shot
 <img src="/Doom93/Assets/Images/dead-screen.png">
