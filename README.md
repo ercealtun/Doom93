@@ -11,5 +11,5 @@
 
 ## In-game shot
 
-<img src="/JettDemo/Assets/Images/in-game.png">
-<img src="/JettDemo/Assets/Images/dead-screen.png">
+<img src="/Doom93/Assets/Images/in-game.png">
+<img src="/Doom93/Assets/Images/dead-screen.png">
