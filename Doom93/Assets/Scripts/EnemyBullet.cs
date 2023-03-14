@@ -8,7 +8,7 @@ public class EnemyBullet : MonoBehaviour
 
     public float bulletSpeed = 5f;
 
-    public Rigidbody2D theRB;
+    public Rigidbody2D rigidbody2D;
 
     private Vector3 direction;
     
@@ -23,7 +23,7 @@ public class EnemyBullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        theRB.velocity = direction * bulletSpeed;
+        rigidbody2D.velocity = direction * bulletSpeed;
     }
 
     private void OnTriggerEnter2D(Collider2D other)

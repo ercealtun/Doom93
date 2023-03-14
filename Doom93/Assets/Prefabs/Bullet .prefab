@@ -65,7 +65,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 5
   bulletSpeed: 3
-  theRB: {fileID: 648837740074704120}
+  rigidbody2D: {fileID: 648837740074704120}
 --- !u!50 &648837740074704120
 Rigidbody2D:
   serializedVersion: 4

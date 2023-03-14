@@ -352,8 +352,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0024414062, y: 0.0057411}
-  m_SizeDelta: {x: 1920, y: 1080}
+  m_AnchoredPosition: {x: 0.0074463, y: 0.0015335}
+  m_SizeDelta: {x: 2560, y: 1440}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &256447317
 MonoBehaviour:
@@ -654,7 +654,7 @@ MonoBehaviour:
   health: 3
   explosion: {fileID: 9210326771826329133, guid: cd8ed2ec5447ad7439f580c9bf974177, type: 3}
   playerRange: 5
-  theRB: {fileID: 332736281}
+  rigidbody2D: {fileID: 332736281}
   moveSpeed: 1
   shouldShoot: 1
   fireRate: 0.5
@@ -951,7 +951,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -1736.5, y: -469.1}
+  m_AnchoredPosition: {x: -2376.5, y: -649.1}
   m_SizeDelta: {x: 366.97, y: 141.79}
   m_Pivot: {x: 0.5000003, y: 0.5}
 --- !u!114 &767654778
@@ -1133,7 +1133,7 @@ GameObject:
   - component: {fileID: 864333948}
   - component: {fileID: 864333949}
   m_Layer: 0
-  m_Name: Background Music
+  m_Name: background music
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1738,32 +1738,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1151113875}
-  - component: {fileID: 1151113874}
+  - component: {fileID: 1151113876}
   m_Layer: 0
-  m_Name: AudioController
+  m_Name: AudioManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1151113874
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1151113873}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1038f712c4df214bb09a371dad69445, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ammo: {fileID: 2013945255}
-  enemyDeath: {fileID: 1055736720}
-  enemyShot: {fileID: 1243507013}
-  gunShot: {fileID: 1552879043}
-  health: {fileID: 2087143632}
-  playerHurt: {fileID: 1663231164}
 --- !u!4 &1151113875
 Transform:
   m_ObjectHideFlags: 0
@@ -1786,6 +1768,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1151113876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151113873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9817b2212e1634846995ecd2dcf557f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ammo: {fileID: 2013945255}
+  enemyDeath: {fileID: 1055736720}
+  enemyShot: {fileID: 1243507013}
+  gunShot: {fileID: 1552879043}
+  health: {fileID: 2087143632}
+  playerHurt: {fileID: 1663231164}
+  backgroundMusic: {fileID: 864333949}
 --- !u!1 &1192640088
 GameObject:
   m_ObjectHideFlags: 0
@@ -1822,7 +1823,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -385.31}
+  m_AnchoredPosition: {x: -0.0000000062864, y: -565.31}
   m_SizeDelta: {x: 184.375, y: 309.375}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1192640090
@@ -2141,7 +2142,7 @@ MonoBehaviour:
   health: 3
   explosion: {fileID: 9210326771826329133, guid: cd8ed2ec5447ad7439f580c9bf974177, type: 3}
   playerRange: 5
-  theRB: {fileID: 1259148179}
+  rigidbody2D: {fileID: 1259148179}
   moveSpeed: 1
   shouldShoot: 1
   fireRate: 0.5
@@ -2354,7 +2355,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -184, y: -469.1}
+  m_AnchoredPosition: {x: -183.48, y: -649.1}
   m_SizeDelta: {x: 366.97, y: 141.79}
   m_Pivot: {x: 0.5000003, y: 0.5}
 --- !u!114 &1449476480
@@ -2540,7 +2541,7 @@ MonoBehaviour:
   health: 3
   explosion: {fileID: 9210326771826329133, guid: cd8ed2ec5447ad7439f580c9bf974177, type: 3}
   playerRange: 5
-  theRB: {fileID: 1450628870}
+  rigidbody2D: {fileID: 1450628870}
   moveSpeed: 1
   shouldShoot: 1
   fireRate: 0.5
@@ -25516,7 +25517,7 @@ MonoBehaviour:
   health: 3
   explosion: {fileID: 9210326771826329133, guid: cd8ed2ec5447ad7439f580c9bf974177, type: 3}
   playerRange: 5
-  theRB: {fileID: 2131821934}
+  rigidbody2D: {fileID: 2131821934}
   moveSpeed: 1
   shouldShoot: 1
   fireRate: 0.5
@@ -25745,7 +25746,7 @@ MonoBehaviour:
   health: 3
   explosion: {fileID: 9210326771826329133, guid: cd8ed2ec5447ad7439f580c9bf974177, type: 3}
   playerRange: 5
-  theRB: {fileID: 2143540254}
+  rigidbody2D: {fileID: 2143540254}
   moveSpeed: 1
   shouldShoot: 1
   fireRate: 0.5

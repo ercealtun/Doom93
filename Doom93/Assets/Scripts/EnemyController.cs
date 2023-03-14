@@ -9,7 +9,7 @@ public class EnemyController : MonoBehaviour
 
     public float playerRange = 10f;
 
-    public Rigidbody2D theRB;
+    public Rigidbody2D rigidbody2D;
     public float moveSpeed;
 
     public bool shouldShoot;
@@ -29,9 +29,9 @@ public class EnemyController : MonoBehaviour
     {
         if (Vector3.Distance(transform.position, PlayerController.instance.transform.position) < playerRange)
         {
-            Vector3 playerDirection = PlayerController.instance.transform.position - transform.position; // = Player's position - enemy's position
+            Vector3 playerDirection = PlayerController.instance.transform.position - transform.position; // equals -> Player's position - enemy's position
 
-            theRB.velocity = playerDirection.normalized * moveSpeed;
+            rigidbody2D.velocity = playerDirection.normalized * moveSpeed;
 
             if (shouldShoot)
             {
@@ -46,7 +46,7 @@ public class EnemyController : MonoBehaviour
         }
         else
         {
-            theRB.velocity = Vector2.zero;
+            rigidbody2D.velocity = Vector2.zero;
         }
     }
 
@@ -58,11 +58,12 @@ public class EnemyController : MonoBehaviour
             Destroy(gameObject);
             Instantiate(explosion, transform.position, transform.rotation);
             
-            AudioController.instance.PlayEnemyDead();
+            
+            AudioManager.Instance.playEnemyDead();
         }
         else
         {
-            AudioController.instance.PlayEnemyShot();
+            AudioManager.Instance.playEnemyShot();
         }
         
     }

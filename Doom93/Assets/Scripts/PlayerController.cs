@@ -72,13 +72,16 @@ public class PlayerController : MonoBehaviour
             viewCam.transform.localRotation = Quaternion.Euler(RotationAmount.x, Mathf.Clamp(RotationAmount.y, minAngle, maxAngle),
                 RotationAmount.z);
             
+            
             // Shooting
             if (Input.GetMouseButtonDown(0))
             {
                 if (currentAmmo > 0)
                 {
+                    AudioManager.Instance.playGunShot();
                     Ray ray = viewCam.ViewportPointToRay(new Vector3(.5f, .5f, 0f));
                     RaycastHit hit;
+                    
                     if (Physics.Raycast(ray, out hit))
                     {
                         //Debug.Log("Player looking at " + hit.transform.name);
@@ -88,9 +91,6 @@ public class PlayerController : MonoBehaviour
                         {
                             hit.transform.parent.GetComponent<EnemyController>().TakeDamage();
                         }
-                        
-                        AudioController.instance.PlayGunShot();
-                        
                     }
                     else
                     {
@@ -121,7 +121,10 @@ public class PlayerController : MonoBehaviour
         
         healthText.text = currentHealth.ToString() + "%";
 
-        if (!hasDied) { AudioController.instance.PlayPlayerHurt(); }
+        if (!hasDied)
+        {
+            AudioManager.Instance.playPlayerHurt();
+        }
 
     }
 

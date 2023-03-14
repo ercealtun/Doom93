@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class HealthPickup : MonoBehaviour
 {
-    public int healthAmount= 25;
+    public int healthAmount = 25;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -21,9 +22,11 @@ public class HealthPickup : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            Debug.Log("Im here");
+            
             PlayerController.instance.AddHealth(healthAmount);
             
-            AudioController.instance.PlayHealthPickup();
+            AudioManager.Instance.playHealthPickup();
             
             Destroy(gameObject);
             

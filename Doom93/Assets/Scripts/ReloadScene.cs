@@ -19,6 +19,7 @@ public class ReloadScene : MonoBehaviour
 
     public void ResetScene()
     {
+        AudioManager.Instance.playBackgroundMusic();
         Debug.Log("Reloaded scene");
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
