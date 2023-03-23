@@ -115,8 +115,9 @@ GameObject:
   - component: {fileID: 1632577010534960080}
   - component: {fileID: 1632577010534960081}
   - component: {fileID: 1632577010534960086}
+  - component: {fileID: 4337224563069573414}
   m_Layer: 0
-  m_Name: EnemyWhiteahead
+  m_Name: EnemyWhitehead
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -280,6 +281,27 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &4337224563069573414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632577010534960087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef81c6f741ccc034fb26d52b66c46079, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 6
+  explosion: {fileID: 9210326771826329133, guid: cd8ed2ec5447ad7439f580c9bf974177, type: 3}
+  playerRange: 5
+  rigidbody2D: {fileID: 1632577010534960086}
+  moveSpeed: 1
+  fireRate: 0.5
+  shotCounter: 0.5
+  bullet: {fileID: 648837740074704121, guid: a41c0f0314e330e47881a7429fa943f8, type: 3}
+  firePoint: {fileID: 1632577010785225276}
 --- !u!1 &1632577010785225277
 GameObject:
   m_ObjectHideFlags: 0

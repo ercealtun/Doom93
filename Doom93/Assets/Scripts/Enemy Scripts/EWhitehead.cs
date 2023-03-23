@@ -6,7 +6,8 @@ using UnityEngine;
 
 public class EWhitehead : Enemy
 {
-
+    //private GameObject whiteheadPrefab;
+    
     public EWhitehead()
     {
         health = 6;
@@ -19,6 +20,7 @@ public class EWhitehead : Enemy
     #region Unity methods
     private void Awake()
     {
+        //whiteheadPrefab = PrefabUtility.LoadPrefabContents("Assets/Prefabs/Enemies/EnemyWhitehead.prefab");
         bullet = PrefabUtility.LoadPrefabContents("Assets/Prefabs/Bullet.prefab");
         explosion = PrefabUtility.LoadPrefabContents("Assets/Prefabs/Explosion.prefab");
         rigidbody2D = GetComponent<Rigidbody2D>();
@@ -46,6 +48,8 @@ public class EWhitehead : Enemy
             shotCounter -= Time.deltaTime * 0.3f; // Countdown
             if (shotCounter <= 0)
             {
+
+
                 Instantiate(bullet, firePoint.position, firePoint.rotation);
                 shotCounter = fireRate;
             }
@@ -72,6 +76,12 @@ public class EWhitehead : Enemy
         {
             AudioManager.Instance.playEnemyShot();
         }
+    }
+
+    public override Enemy Clone()
+    {
+        return (Enemy)base.MemberwiseClone();
+
     }
 
     #endregion

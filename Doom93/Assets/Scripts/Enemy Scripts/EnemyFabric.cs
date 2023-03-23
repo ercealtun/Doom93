@@ -1,11 +1,14 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 
 public class EnemyFabric : MonoBehaviour
 {
-    public static EnemyFabric instance; 
-    
+    public static EnemyFabric instance;
+
     [SerializeField] private GameObject whiteheadPrefab;
     [SerializeField] private GameObject daredevilPrefab;
     [SerializeField] private GameObject maddenedPrefab;
@@ -13,26 +16,17 @@ public class EnemyFabric : MonoBehaviour
     public GameObject[] spawnPoints;
     public int spawnerIndex = 0;
 
+    private EWhitehead whiteheadPrototype = new EWhitehead();
+    private EDaredevil daredevilPrototype = new EDaredevil();
+    private EMaddened maddenedPrototype = new EMaddened();
+
     public enum EnemyType
     {
         Whitehead,
         Daredevil,
         Maddened 
     }
-    
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    
     public Enemy FabricateEnemy(EnemyType enemyType)
     {
         if (enemyType == EnemyType.Whitehead)
@@ -40,26 +34,29 @@ public class EnemyFabric : MonoBehaviour
             GameObject whitehead = Instantiate(whiteheadPrefab,
                 spawnPoints[spawnerIndex++].transform.position, 
                 Quaternion.identity);
-            whitehead.AddComponent<EWhitehead>();
-            return new EWhitehead();
+            Enemy newEnemy = whiteheadPrototype.Clone();
+            newEnemy = whitehead.AddComponent<EWhitehead>();
+            return newEnemy;
         }else if (enemyType == EnemyType.Daredevil)
         {
             GameObject daredevil = Instantiate(daredevilPrefab,
                 spawnPoints[spawnerIndex++].transform.position,
                 Quaternion.identity);
-            daredevil.AddComponent<EDaredevil>();
-            return new EDaredevil();
+            Enemy newEnemy = daredevilPrototype.Clone();
+            newEnemy = daredevil.AddComponent<EDaredevil>();
+            return newEnemy;
         }else if (enemyType == EnemyType.Maddened)
         {
             GameObject maddened = Instantiate(maddenedPrefab,
                 spawnPoints[spawnerIndex].transform.position,
                 Quaternion.identity);
-            maddened.AddComponent<EMaddened>();
-            return new EMaddened();
+            Enemy newEnemy = maddenedPrototype.Clone();
+            newEnemy = maddened.AddComponent<EMaddened>();
+            return newEnemy;
         }
-        else
-        {
-            return null;
-        }
+
+        return null;
+
     }
+    
 }

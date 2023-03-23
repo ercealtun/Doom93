@@ -23,8 +23,9 @@ public abstract class Enemy : MonoBehaviour
     public Transform firePoint;
 
     // METHODS
+    
     public abstract void DetectPlayer();
     public abstract void TakeDamage();
-    
+    public abstract Enemy Clone();
 
 }

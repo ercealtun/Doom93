@@ -146,6 +146,7 @@ GameObject:
   - component: {fileID: 7414981727925733551}
   - component: {fileID: 7414981727925733536}
   - component: {fileID: 7414981727925733537}
+  - component: {fileID: 4524288584974636172}
   m_Layer: 0
   m_Name: EnemyDaredevil
   m_TagString: Untagged
@@ -161,7 +162,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7414981727925733538}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 23.8, y: 6.36, z: -0.47}
+  m_LocalPosition: {x: 18.15, y: 17.37, z: -0.4699993}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -311,3 +312,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &4524288584974636172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7414981727925733538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dae07e95bed6774ea4c424df6beb9e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
+  explosion: {fileID: 9210326771826329133, guid: cd8ed2ec5447ad7439f580c9bf974177, type: 3}
+  playerRange: 5.2
+  rigidbody2D: {fileID: 7414981727925733537}
+  moveSpeed: 1.2
+  fireRate: 0.5
+  shotCounter: 0.5
+  bullet: {fileID: 648837740074704121, guid: a41c0f0314e330e47881a7429fa943f8, type: 3}
+  firePoint: {fileID: 7414981726610223669}

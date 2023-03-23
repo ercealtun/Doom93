@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -6,6 +7,7 @@ using UnityEngine;
 
 public class EMaddened : Enemy
 {
+    //private GameObject maddenedPrefab;
     public EMaddened()
     {
         health = 14;
@@ -19,6 +21,7 @@ public class EMaddened : Enemy
 
     private void Awake()
     {
+        //maddenedPrefab = PrefabUtility.LoadPrefabContents("Assets/Prefabs/Enemies/EnemyMaddened.prefab");
         bullet = PrefabUtility.LoadPrefabContents("Assets/Prefabs/Bullet.prefab");
         explosion = PrefabUtility.LoadPrefabContents("Assets/Prefabs/Explosion.prefab");
         rigidbody2D = GetComponent<Rigidbody2D>();
@@ -47,6 +50,7 @@ public class EMaddened : Enemy
             shotCounter -= Time.deltaTime; // Countdown
             if (shotCounter <= 0)
             {
+                
                 Instantiate(bullet, firePoint.position, firePoint.rotation);
                 shotCounter = fireRate;
             }
@@ -74,6 +78,12 @@ public class EMaddened : Enemy
             AudioManager.Instance.playEnemyShot();
         }
     }
+    
+    public override Enemy Clone()
+    {
+        return (Enemy)base.MemberwiseClone();
+    }
+
 
     #endregion
     

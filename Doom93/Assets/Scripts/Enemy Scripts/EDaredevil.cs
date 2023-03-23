@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
@@ -5,6 +6,7 @@ using UnityEngine;
 
 public class EDaredevil : Enemy
 {
+    //private GameObject daredevilPrefab;
     public EDaredevil()
     {
         health = 10;
@@ -17,7 +19,8 @@ public class EDaredevil : Enemy
     
     #region Unity methods
     private void Awake()
-    {
+    { 
+        //daredevilPrefab = PrefabUtility.LoadPrefabContents("Assets/Prefabs/Enemies/EnemyDaredevil.prefab");
         bullet = PrefabUtility.LoadPrefabContents("Assets/Prefabs/Bullet.prefab");
         explosion = PrefabUtility.LoadPrefabContents("Assets/Prefabs/Explosion.prefab");
         rigidbody2D = GetComponent<Rigidbody2D>();
@@ -44,6 +47,7 @@ public class EDaredevil : Enemy
             shotCounter -= Time.deltaTime * 0.5f; // Countdown
             if (shotCounter <= 0)
             {
+        
                 Instantiate(bullet, firePoint.position, firePoint.rotation);
                 shotCounter = fireRate;
             }
@@ -71,6 +75,13 @@ public class EDaredevil : Enemy
             AudioManager.Instance.playEnemyShot();
         }
     }
+    
+    public override Enemy Clone()
+    {
+        return (Enemy)base.MemberwiseClone();
+
+    }
+
 
     #endregion
     
