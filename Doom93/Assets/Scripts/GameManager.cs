@@ -5,6 +5,10 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager instance;
+    
+    [SerializeField] private GameObject gameIsDoneScreen;
+
     private bool tryToResume;
     private void Awake()
     {
@@ -34,9 +38,16 @@ public class GameManager : MonoBehaviour
                 tryToResume = false;
             }
         }
-        
 
-        
+        if (Enemy.deadEnemyCount == 5)
+        {
+            gameIsDoneScreen.SetActive(true);
+            Enemy.deadEnemyCount = 0;
+        }
+
+
+
+
     }
 
     private void LockCursor()

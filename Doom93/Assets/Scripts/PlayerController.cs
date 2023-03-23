@@ -89,7 +89,7 @@ public class PlayerController : MonoBehaviour
     
                         if (hit.transform.tag == "Enemy")
                         {
-                            hit.transform.parent.GetComponent<EnemyController>().TakeDamage();
+                            hit.transform.parent.GetComponent<Enemy>().TakeDamage();
                         }
                     }
                     else
@@ -117,6 +117,7 @@ public class PlayerController : MonoBehaviour
             deadScreen.SetActive(true);
             hasDied = true;
             currentHealth = 0;
+            Enemy.deadEnemyCount = 0;
         }
         
         healthText.text = currentHealth.ToString() + "%";

@@ -22,8 +22,7 @@ public class HealthPickup : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            Debug.Log("Im here");
-            
+
             PlayerController.instance.AddHealth(healthAmount);
             
             AudioManager.Instance.playHealthPickup();

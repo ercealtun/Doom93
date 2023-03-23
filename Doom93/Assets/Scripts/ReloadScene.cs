@@ -22,5 +22,7 @@ public class ReloadScene : MonoBehaviour
         AudioManager.Instance.playBackgroundMusic();
         Debug.Log("Reloaded scene");
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        EnemyFabric.instance.spawnerIndex = 0;
+        
     }
 }
