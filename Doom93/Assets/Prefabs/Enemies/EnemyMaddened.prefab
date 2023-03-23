@@ -142,7 +142,6 @@ GameObject:
   - component: {fileID: 471077847554408532}
   - component: {fileID: 471077847554408533}
   - component: {fileID: 471077847554408534}
-  - component: {fileID: 471077847554408535}
   - component: {fileID: 471077847554408528}
   - component: {fileID: 471077847554408529}
   - component: {fileID: 471077847554408530}
@@ -197,27 +196,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.25
---- !u!114 &471077847554408535
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 471077847554408531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2f5450a231f74d4d9f1a311772cb83c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 3
-  explosion: {fileID: 9210326771826329133, guid: cd8ed2ec5447ad7439f580c9bf974177, type: 3}
-  playerRange: 5
-  rigidbody2D: {fileID: 471077847554408530}
-  moveSpeed: 1
-  shouldShoot: 1
-  fireRate: 0.5
-  bullet: {fileID: 648837740074704121, guid: a41c0f0314e330e47881a7429fa943f8, type: 3}
-  firePoint: {fileID: 471077847082969607}
 --- !u!95 &471077847554408528
 Animator:
   serializedVersion: 4

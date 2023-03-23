@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class AmmoPickup : MonoBehaviour
 {
-    public int ammoAmount = 25;
+    public int ammoAmount = 30;
     // Start is called before the first frame update
     void Start()
     {
