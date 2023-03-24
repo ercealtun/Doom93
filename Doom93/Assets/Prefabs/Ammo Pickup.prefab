@@ -107,7 +107,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1434513131751347936}
   - component: {fileID: 1434513131751347937}
-  - component: {fileID: 1434513131751347939}
+  - component: {fileID: 4737595739077481682}
   m_Layer: 0
   m_Name: Ammo Pickup
   m_TagString: Untagged
@@ -147,7 +147,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.25
---- !u!114 &1434513131751347939
+--- !u!114 &4737595739077481682
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -156,7 +156,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1434513131751347942}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 476a45ac6ff5d504694fd3cc86ea19da, type: 3}
+  m_Script: {fileID: 11500000, guid: f1b768453d8ab4045a5fc9c2f9c9c62f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammoAmount: 25

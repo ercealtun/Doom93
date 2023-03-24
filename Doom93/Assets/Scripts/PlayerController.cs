@@ -78,7 +78,7 @@ public class PlayerController : MonoBehaviour
             {
                 if (currentAmmo > 0)
                 {
-                    AudioManager.Instance.playGunShot();
+                    AudioManager.Instance.PlayGunShot();
                     Ray ray = viewCam.ViewportPointToRay(new Vector3(.5f, .5f, 0f));
                     RaycastHit hit;
                     
@@ -124,7 +124,7 @@ public class PlayerController : MonoBehaviour
 
         if (!hasDied)
         {
-            AudioManager.Instance.playPlayerHurt();
+            AudioManager.Instance.PlayPlayerHurt();
         }
 
     }

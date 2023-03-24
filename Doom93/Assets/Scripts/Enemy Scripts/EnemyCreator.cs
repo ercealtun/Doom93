@@ -17,8 +17,10 @@ public class EnemyCreator : MonoBehaviour
         enemies.Add(enemyFabric.FabricateEnemy(EnemyFabric.EnemyType.Whitehead));
         enemies.Add(enemyFabric.FabricateEnemy(EnemyFabric.EnemyType.Whitehead));
         enemies.Add(enemyFabric.FabricateEnemy(EnemyFabric.EnemyType.Daredevil));
-        enemies.Add(enemyFabric.FabricateEnemy(EnemyFabric.EnemyType.Daredevil));
         enemies.Add(enemyFabric.FabricateEnemy(EnemyFabric.EnemyType.Maddened));
+        enemies.Add(enemyFabric.FabricateEnemy(EnemyFabric.EnemyType.Maddened));
+        enemies.Add(enemyFabric.FabricateEnemy(EnemyFabric.EnemyType.Daredevil));
+
     }
 
     // Update is called once per frame

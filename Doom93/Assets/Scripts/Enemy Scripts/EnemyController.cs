@@ -59,11 +59,11 @@ public class EnemyController : MonoBehaviour
             Instantiate(explosion, transform.position, transform.rotation);
             
             
-            AudioManager.Instance.playEnemyDead();
+            AudioManager.Instance.PlayEnemyDead();
         }
         else
         {
-            AudioManager.Instance.playEnemyShot();
+            AudioManager.Instance.PlayEnemyShot();
         }
         
     }

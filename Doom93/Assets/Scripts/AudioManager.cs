@@ -8,92 +8,63 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    private static AudioManager instance = null;
+    public static AudioManager Instance = null;
     
     public AudioSource ammo, enemyDeath, enemyShot, gunShot, health, playerHurt, backgroundMusic;
 
     private void Awake()
     {
-        if (instance != null)
+        if (Instance != null)
         {
             Destroy(this);
         }
         else
         {
-            DontDestroyOnLoad(this);
+            Instance = this;
         }
 
-    }
-    
-    public static AudioManager Instance
-    {
-        get
-        {
-            /* If instance is null, the FindObjectOfType function
-             finds this existing script object in the scene and assigns 
-             it to the instance variable.
-            */ 
-            if (instance == null)
-            {
-                instance = FindObjectOfType<AudioManager>();
-                
-                // If it's still null, then create a new game object with AudioManager(Singleton) component
-                if (instance == null) 
-                {
-                    instance = new GameObject("AudioManager").AddComponent<AudioManager>();
-                    
-                    /*
-                    GameObject gameObject = new GameObject();
-                    gameObject.name = typeof(AudioManager).Name;
-                    instance = gameObject.AddComponent<AudioManager>();
-                    DontDestroyOnLoad(gameObject);
-                    */
-                }
-            }
-            return instance;
-        }
     }
 
     #region AUDIO Methods
 
-    public void playAmmoPickup()
+    public void PlayAmmoPickup()
     {
         ammo.Stop(); 
         ammo.Play();
     }
     
-    public void playEnemyDead()
+    public void PlayEnemyDead()
     {
         enemyDeath.Stop(); 
         enemyDeath.Play();
     }
     
-    public void playEnemyShot()
+    public void PlayEnemyShot()
     {
         enemyShot.Stop(); 
         enemyShot.Play();
     }
     
-    public void playGunShot()
+    public void PlayGunShot()
     {
         gunShot.Stop(); 
         gunShot.Play();
     }
     
-    public void playHealthPickup()
+    public void PlayHealthPickup()
     {
         health.Stop(); 
         health.Play();
     }
     
-    public void playPlayerHurt()
+    public void PlayPlayerHurt()
     {
         playerHurt.Stop(); 
         playerHurt.Play();
     }
     
     
-    public void playBackgroundMusic()
+    public void PlayBackgroundMusic()
     {
         backgroundMusic.Stop(); 
         backgroundMusic.Play();

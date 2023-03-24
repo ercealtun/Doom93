@@ -68,20 +68,13 @@ public class EDaredevil : Enemy
             Instantiate(explosion, transform.position, transform.rotation);
             deadEnemyCount++;
 
-            AudioManager.Instance.playEnemyDead();
+            AudioManager.Instance.PlayEnemyDead();
         }
         else
         {
-            AudioManager.Instance.playEnemyShot();
+            AudioManager.Instance.PlayEnemyShot();
         }
     }
-    
-    public override Enemy Clone()
-    {
-        return (Enemy)base.MemberwiseClone();
-
-    }
-
 
     #endregion
     

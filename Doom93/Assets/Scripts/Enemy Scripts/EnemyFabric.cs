@@ -48,7 +48,7 @@ public class EnemyFabric : MonoBehaviour
         }else if (enemyType == EnemyType.Maddened)
         {
             GameObject maddened = Instantiate(maddenedPrefab,
-                spawnPoints[spawnerIndex].transform.position,
+                spawnPoints[spawnerIndex++].transform.position,
                 Quaternion.identity);
             Enemy newEnemy = maddenedPrototype.Clone();
             newEnemy = maddened.AddComponent<EMaddened>();
