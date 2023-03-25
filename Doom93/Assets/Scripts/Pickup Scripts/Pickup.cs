@@ -2,27 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * TYPE OBJECT pattern implemented
+ */
+
+
 public class Pickup
 {
-    private int healthValue { get; }
-    private int ammoValue { get; }
-    private PickupBreed _pickupBreed;
+    private int healthValue;
+    private int ammoValue;
+    private PickupBreed pickupBreed;
 
     public Pickup(PickupBreed pickupBreed)
     {
-        _pickupBreed = pickupBreed;
-        healthValue = _pickupBreed.getHealthValue();
-        ammoValue = _pickupBreed.getAmmoValue();
+        this.pickupBreed = pickupBreed;
+        healthValue = pickupBreed.GetHealthValue();
+        ammoValue = pickupBreed.GetAmmoValue();
     }
 
 
-    public int getHealthValue()
+    public int GetHealthValue()
     {
         return healthValue;
         
     }
 
-    public int getAmmoValue()
+    public int GetAmmoValue()
     {
         return ammoValue;
     }

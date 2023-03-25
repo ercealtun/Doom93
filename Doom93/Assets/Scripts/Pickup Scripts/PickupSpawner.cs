@@ -29,11 +29,11 @@ public class PickupSpawner : MonoBehaviour
         Ammo
     }
 
-
     public void SpawnPickups(PickupSpawner.PickupTypes type)
     {
         if (type == PickupTypes.Ammo)
         {
+            
             GameObject ammoPickupObject = Instantiate(ammoPrefab,
                 spawnPoints[spawnerIndex++].transform.position, 
                 Quaternion.identity);

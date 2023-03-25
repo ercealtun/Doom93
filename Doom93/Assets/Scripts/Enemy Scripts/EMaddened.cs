@@ -5,6 +5,10 @@ using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
+/*
+ * Child of abstract class
+ */
+
 public class EMaddened : Enemy
 {
     //private GameObject maddenedPrefab;

@@ -2,42 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b39133fe-7c43-44f9-bdfe-b6cd50660ac6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Pickup Scripts.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Pickup Scripts/Pickup.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Pickup Scripts/Pickup.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Pickup Scripts/PickupBreed.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Pickup Scripts/PickupBreed.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Pickup Scripts/PickupObjects.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Pickup Scripts/PickupObjects.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Pickup Scripts/PickupSpawner.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Pickup Scripts/PickupSpawner.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Doom93/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Doom93/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ammo Pickup.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ammo Pickup.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bullet Impact.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bullet Impact.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bullet.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/EnemyDaredevil.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/EnemyDaredevil.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/EnemyMaddened.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/EnemyMaddened.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/EnemyWhitehead.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/EnemyWhitehead.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Health Pickup.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Health Pickup.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AmmoPickup.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AmmoPickup.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AudioController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AudioController.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Scripts/EDaredevil.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy Scripts/EDaredevil.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Scripts/EMaddened.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy Scripts/EMaddened.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Scripts/EWhitehead.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy Scripts/EWhitehead.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Scripts/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy Scripts/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Scripts/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy Scripts/EnemyController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Scripts/EnemyCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy Scripts/EnemyCreator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Scripts/EnemyFabric.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy Scripts/EnemyFabric.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HealthPickup.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HealthPickup.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pickups.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pickups.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ReloadScene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ReloadScene.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pickup Scripts/Pickup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pickup Scripts/Pickup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pickup Scripts/PickupBreed.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pickup Scripts/PickupBreed.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pickup Scripts/PickupObjects.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pickup Scripts/PickupObjects.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pickup Scripts/PickupSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pickup Scripts/PickupSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,6 +131,9 @@
       <workItem from="1679568333860" duration="757000" />
       <workItem from="1679569125334" duration="8455000" />
       <workItem from="1679655982443" duration="7655000" />
+      <workItem from="1679669351241" duration="1199000" />
+      <workItem from="1679742786371" duration="5937000" />
+      <workItem from="1679749217868" duration="712000" />
     </task>
     <servers />
   </component>

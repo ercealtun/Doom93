@@ -3,7 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// This scripts orders the enemies
+/*
+ * Orders the enemies (enemy shop)
+ */
 
 public class EnemyCreator : MonoBehaviour
 {

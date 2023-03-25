@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * TYPE OBJECT pattern implemented
+ */
+
 public class PickupBreed
 {
     private int healthValue;
@@ -19,13 +23,13 @@ public class PickupBreed
         return new Pickup(this);
     }
 
-    public int getHealthValue()
+    public int GetHealthValue()
     {
         return healthValue;
         
     }
 
-    public int getAmmoValue()
+    public int GetAmmoValue()
     {
         return ammoValue;
     }

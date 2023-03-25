@@ -4,7 +4,9 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
-
+/*
+ * FACTORY and PROTOTYPE pattern implemented
+ */
 public class EnemyFabric : MonoBehaviour
 {
     public static EnemyFabric instance;

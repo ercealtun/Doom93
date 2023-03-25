@@ -4,6 +4,9 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
+/*
+ * Child of abstract class
+ */
 public class EWhitehead : Enemy
 {
     //private GameObject whiteheadPrefab;
@@ -20,7 +23,6 @@ public class EWhitehead : Enemy
     #region Unity methods
     private void Awake()
     {
-        //whiteheadPrefab = PrefabUtility.LoadPrefabContents("Assets/Prefabs/Enemies/EnemyWhitehead.prefab");
         bullet = PrefabUtility.LoadPrefabContents("Assets/Prefabs/Bullet.prefab");
         explosion = PrefabUtility.LoadPrefabContents("Assets/Prefabs/Explosion.prefab");
         rigidbody2D = GetComponent<Rigidbody2D>();

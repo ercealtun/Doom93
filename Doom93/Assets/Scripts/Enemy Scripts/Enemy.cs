@@ -3,6 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * Abstract class and implements cloning
+ */
+
 public abstract class Enemy : MonoBehaviour
 {
     

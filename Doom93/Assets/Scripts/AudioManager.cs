@@ -1,10 +1,11 @@
-// This script has been coded in accordance with the SINGLETON pattern
-
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
+/*
+ *  SINGLETON pattern implemented
+ */
 
 public class AudioManager : MonoBehaviour
 {

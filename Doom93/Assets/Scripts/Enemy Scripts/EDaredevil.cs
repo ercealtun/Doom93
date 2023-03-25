@@ -4,9 +4,12 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
+/*
+ * Child of abstract class
+ */
+
 public class EDaredevil : Enemy
 {
-    //private GameObject daredevilPrefab;
     public EDaredevil()
     {
         health = 10;
@@ -19,8 +22,7 @@ public class EDaredevil : Enemy
     
     #region Unity methods
     private void Awake()
-    { 
-        //daredevilPrefab = PrefabUtility.LoadPrefabContents("Assets/Prefabs/Enemies/EnemyDaredevil.prefab");
+    {
         bullet = PrefabUtility.LoadPrefabContents("Assets/Prefabs/Bullet.prefab");
         explosion = PrefabUtility.LoadPrefabContents("Assets/Prefabs/Explosion.prefab");
         rigidbody2D = GetComponent<Rigidbody2D>();
