@@ -24,10 +24,4 @@ public class EnemyCreator : MonoBehaviour
         enemies.Add(enemyFabric.FabricateEnemy(EnemyFabric.EnemyType.Daredevil));
 
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

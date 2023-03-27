@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        if (Enemy.deadEnemyCount == 5)
+        if (Enemy.deadEnemyCount == 6)
         {
             gameIsDoneScreen.SetActive(true);
             Enemy.deadEnemyCount = 0;

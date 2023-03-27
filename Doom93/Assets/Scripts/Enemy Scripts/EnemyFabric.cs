@@ -58,7 +58,6 @@ public class EnemyFabric : MonoBehaviour
         }
 
         return null;
-
     }
     
 }
