@@ -7,7 +7,7 @@
 
 ## Gameplay Link 
 
-🔗 [Doom93 Video Link](https://www.youtube.com/watch?v=R1oJJzw4y80&t=1s)
+🔗 [Doom93 Video Link](https://www.youtube.com/watch?v=K5CyAsGtHKM)
 
 ## In-game shot
 
