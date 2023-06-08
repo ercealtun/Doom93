@@ -2,10 +2,60 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b39133fe-7c43-44f9-bdfe-b6cd50660ac6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/EnemyData.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/EnemyData.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/HarmlessGuy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/HarmlessGuy.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/HarmlessGuy.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/HarmlessGuy.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Pickups.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Pickups/Ammo Pickup.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Pickups/Ammo Pickup.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Pickups/Health Pickup.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Pickups/Health Pickup.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/BossPassage.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/BossPassage.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy Scripts/EnemyData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy Scripts/EnemyData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/IAttackA.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/IAttackA.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/IAttackB.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/IAttackB.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/IStrategyAttack.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/IStrategyAttack.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerDebugger.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerDebugger.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerDecorator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerDecorator.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/c1811005_Scripts.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/c1811005_Scripts.zip.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Doom93/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Doom93/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ammo Pickup.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ammo Pickup.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Door.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Door.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/EnemyDaredevil.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/EnemyDaredevil.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/EnemyMaddened.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/EnemyMaddened.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/EnemyWhitehead.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/EnemyWhitehead.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Health Pickup.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Health Pickup.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/test.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/test.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Scripts/EDaredevil.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy Scripts/EDaredevil.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Scripts/EMaddened.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy Scripts/EMaddened.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Scripts/EWhitehead.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy Scripts/EWhitehead.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Scripts/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy Scripts/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Scripts/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy Scripts/EnemyController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Scripts/EnemyCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy Scripts/EnemyCreator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy Scripts/EnemyFabric.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy Scripts/EnemyFabric.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pickup Scripts/PickupSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pickup Scripts/PickupSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ReloadScene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ReloadScene.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
@@ -15,13 +65,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1814dcccc6d4479b87e701be93b4a75526e00/b6/8c7e3291/Animator.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1d3dacd00ce441dc8c61d528a2193088158400/23/385fe229/Component.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1d3dacd00ce441dc8c61d528a2193088158400/66/a3c8cb5a/Object.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BossPassage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DestroyOverTime.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy Scripts/EnemyData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy Scripts/EnemyFabric.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerDebugger.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -48,15 +97,15 @@
   },
   &quot;keyToStringList&quot;: {
     &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\ADMİN\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\ADMİN\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\ADMİN\\AppData\\Local\\Symbols\\src&quot;
+      &quot;C:\\Users\\ercea\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\ercea\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\ercea\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.12f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.22f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath &quot;D:\Unity Projects\Doom93\Doom93&quot; -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\Unity Projects\Doom93\Doom93" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -64,7 +113,7 @@
       <method v="2" />
     </configuration>
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.12f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.22f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath &quot;D:\Unity Projects\Doom93\Doom93&quot; -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\Unity Projects\Doom93\Doom93" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -129,6 +178,27 @@
       <workItem from="1679749217868" duration="1518000" />
       <workItem from="1679836117253" duration="919000" />
       <workItem from="1679900843158" duration="2122000" />
+      <workItem from="1680701781973" duration="7011000" />
+      <workItem from="1681549419568" duration="8481000" />
+      <workItem from="1681558869642" duration="1043000" />
+      <workItem from="1681642643688" duration="3469000" />
+      <workItem from="1681715790826" duration="2508000" />
+      <workItem from="1681720998494" duration="1537000" />
+      <workItem from="1681722669869" duration="488000" />
+      <workItem from="1681805303287" duration="40000" />
+      <workItem from="1681805373350" duration="391000" />
+      <workItem from="1681813328091" duration="356000" />
+      <workItem from="1682281389889" duration="114000" />
+      <workItem from="1682281866798" duration="47000" />
+      <workItem from="1684945724150" duration="736000" />
+      <workItem from="1684946696658" duration="14000" />
+      <workItem from="1685004535366" duration="7154000" />
+      <workItem from="1685015220921" duration="82000" />
+      <workItem from="1685040324641" duration="5146000" />
+      <workItem from="1685343784300" duration="1281000" />
+      <workItem from="1685354752425" duration="1899000" />
+      <workItem from="1685357294412" duration="1927000" />
+      <workItem from="1685359286408" duration="1084000" />
     </task>
     <servers />
   </component>

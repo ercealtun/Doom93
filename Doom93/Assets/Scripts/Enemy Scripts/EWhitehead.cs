@@ -4,34 +4,36 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-/*
- * Child of abstract class
- */
+// Child class : Flyweight and strategy pattern implemented
 public class EWhitehead : Enemy
 {
-    //private GameObject whiteheadPrefab;
+    public EnemyData enemyData = null;
     
     public EWhitehead()
     {
         health = 6;
         playerRange = 5f;
-        moveSpeed = 1;
-        fireRate = .5f;
-        shotCounter = fireRate;
+        
     }
     
     #region Unity methods
-    private void Awake()
+
+    private void Start()
     {
-        bullet = PrefabUtility.LoadPrefabContents("Assets/Prefabs/Bullet.prefab");
-        explosion = PrefabUtility.LoadPrefabContents("Assets/Prefabs/Explosion.prefab");
-        rigidbody2D = GetComponent<Rigidbody2D>();
-        firePoint = transform.GetChild(0).GetChild(0);
+        shotCounter = enemyData.FireRate;
     }
-    
+
     void Update()
     {
         DetectPlayer();
+
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            SwitchAttacks(new IAttackA());
+        }else if (Input.GetKeyDown(KeyCode.B))
+        {
+            SwitchAttacks(new IAttackB());
+        }
     }
     #endregion
     
@@ -42,18 +44,17 @@ public class EWhitehead : Enemy
         // If found player shoot
         if (Vector3.Distance(transform.position, PlayerController.instance.transform.position) < playerRange)
         {
-           
+            DebugWhenAttacked();
+            
             Vector3 playerDirection = PlayerController.instance.transform.position - transform.position; // equals -> Player's position - enemy's position
 
-            rigidbody2D.velocity = playerDirection.normalized * moveSpeed * 0.5f;
+            rigidbody2D.velocity = playerDirection.normalized * enemyData.MoveSpeed * 0.5f;
 
             shotCounter -= Time.deltaTime * 0.3f; // Countdown
             if (shotCounter <= 0)
             {
-
-
                 Instantiate(bullet, firePoint.position, firePoint.rotation);
-                shotCounter = fireRate;
+                shotCounter = enemyData.FireRate;
             }
             
         }
@@ -68,6 +69,8 @@ public class EWhitehead : Enemy
         health-=1;
         if (health <= 0)
         {
+
+            
             Destroy(gameObject);
             Instantiate(explosion, transform.position, transform.rotation);
             deadEnemyCount++;

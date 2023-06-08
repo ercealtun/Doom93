@@ -111,13 +111,13 @@ GameObject:
   - component: {fileID: 1632577010534960092}
   - component: {fileID: 1632577010534960093}
   - component: {fileID: 1632577010534960082}
-  - component: {fileID: 1632577010534960083}
   - component: {fileID: 1632577010534960080}
   - component: {fileID: 1632577010534960081}
   - component: {fileID: 1632577010534960086}
+  - component: {fileID: 7890601996148315529}
   m_Layer: 0
   m_Name: EnemyWhitehead
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -166,30 +166,9 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.25
---- !u!114 &1632577010534960083
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1632577010534960087}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2f5450a231f74d4d9f1a311772cb83c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 3
-  explosion: {fileID: 9210326771826329133, guid: cd8ed2ec5447ad7439f580c9bf974177, type: 3}
-  playerRange: 5
-  rigidbody2D: {fileID: 1632577010534960086}
-  moveSpeed: 1
-  shouldShoot: 1
-  fireRate: 0.5
-  bullet: {fileID: 648837740074704121, guid: a41c0f0314e330e47881a7429fa943f8, type: 3}
-  firePoint: {fileID: 1632577010785225276}
 --- !u!95 &1632577010534960080
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -206,7 +185,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!212 &1632577010534960081
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -280,6 +260,26 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &7890601996148315529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632577010534960087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef81c6f741ccc034fb26d52b66c46079, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 6
+  explosion: {fileID: 9210326771826329133, guid: cd8ed2ec5447ad7439f580c9bf974177, type: 3}
+  playerRange: 5
+  rigidbody2D: {fileID: 1632577010534960086}
+  shotCounter: 0
+  bullet: {fileID: 648837740074704121, guid: a41c0f0314e330e47881a7429fa943f8, type: 3}
+  firePoint: {fileID: 1632577010785225276}
+  enemyData: {fileID: 11400000, guid: 587d8375c9fbbbc41bc633868b999109, type: 2}
 --- !u!1 &1632577010785225277
 GameObject:
   m_ObjectHideFlags: 0

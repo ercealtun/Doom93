@@ -75,7 +75,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorModel: {fileID: 7040901953387659009}
   colObject: {fileID: 5274942072581580674}
-  openSpeed: 2
+  openSpeed: 3
 --- !u!1 &5274942072581580674
 GameObject:
   m_ObjectHideFlags: 0

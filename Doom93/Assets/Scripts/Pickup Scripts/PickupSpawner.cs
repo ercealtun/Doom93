@@ -8,7 +8,6 @@ public class PickupSpawner : MonoBehaviour
     [SerializeField] private GameObject ammoPrefab;
     [SerializeField] private GameObject healthPrefab;
 
-    
     public GameObject[] spawnPoints;
     public int spawnerIndex = 0;
 

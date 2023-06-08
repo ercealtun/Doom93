@@ -3,12 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Parent class
+
 /*
- * Abstract class and implements cloning
+ * Abstract class and implements prototype and strategy patterns
  */
 
 public abstract class Enemy : MonoBehaviour
 {
+    private IStrategyAttack strategyAttack = new IAttackA();
     
     // VARIABLES
     public static int deadEnemyCount = 0;
@@ -19,9 +22,7 @@ public abstract class Enemy : MonoBehaviour
     public float playerRange;
 
     public Rigidbody2D rigidbody2D;
-    public float moveSpeed;
-    
-    public float fireRate;
+
     public float shotCounter;
     public GameObject bullet;
     public Transform firePoint;
@@ -29,6 +30,16 @@ public abstract class Enemy : MonoBehaviour
     // METHODS
     public abstract void DetectPlayer();
     public abstract void TakeDamage();
+
+    public void DebugWhenAttacked()
+    {
+        strategyAttack.GetAttackType();
+    }
+
+    public void SwitchAttacks(IStrategyAttack strategyAttack)
+    {
+        this.strategyAttack = strategyAttack;
+    }
     public Enemy Clone()
     {
         return (Enemy)MemberwiseClone();

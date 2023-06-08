@@ -9,19 +9,17 @@ using UnityEngine;
 
 public class EnemyCreator : MonoBehaviour
 {
-    List<Enemy> enemies = new List<Enemy>();
 
     [SerializeField] private EnemyFabric enemyFabric;
-    
+
     // Start is called before the first frame update
     void Start()
     {
-        enemies.Add(enemyFabric.FabricateEnemy(EnemyFabric.EnemyType.Whitehead));
-        enemies.Add(enemyFabric.FabricateEnemy(EnemyFabric.EnemyType.Whitehead));
-        enemies.Add(enemyFabric.FabricateEnemy(EnemyFabric.EnemyType.Daredevil));
-        enemies.Add(enemyFabric.FabricateEnemy(EnemyFabric.EnemyType.Maddened));
-        enemies.Add(enemyFabric.FabricateEnemy(EnemyFabric.EnemyType.Maddened));
-        enemies.Add(enemyFabric.FabricateEnemy(EnemyFabric.EnemyType.Daredevil));
-
+        enemyFabric.FabricateEnemy(EnemyFabric.EnemyType.Whitehead);
+        enemyFabric.FabricateEnemy(EnemyFabric.EnemyType.Whitehead);
+        enemyFabric.FabricateEnemy(EnemyFabric.EnemyType.Maddened);
+        enemyFabric.FabricateEnemy(EnemyFabric.EnemyType.Daredevil);
+        enemyFabric.FabricateEnemy(EnemyFabric.EnemyType.Daredevil);
+        enemyFabric.FabricateEnemy(EnemyFabric.EnemyType.Daredevil);
     }
 }

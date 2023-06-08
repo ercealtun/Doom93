@@ -4,32 +4,24 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UIElements;
 
-/*
- * Child of abstract class
- */
+// Child class : Flyweight and strategy pattern implemented
 
 public class EMaddened : Enemy
 {
-    //private GameObject maddenedPrefab;
+    public EnemyData enemyData = null;
     public EMaddened()
     {
-        health = 14;
+        health = 30;
         playerRange = 6f;
-        moveSpeed = 2;
-        fireRate = .5f;
-        shotCounter = fireRate;
     }
 
     #region Unity methods
 
-    private void Awake()
+    private void Start()
     {
-        //maddenedPrefab = PrefabUtility.LoadPrefabContents("Assets/Prefabs/Enemies/EnemyMaddened.prefab");
-        bullet = PrefabUtility.LoadPrefabContents("Assets/Prefabs/Bullet.prefab");
-        explosion = PrefabUtility.LoadPrefabContents("Assets/Prefabs/Explosion.prefab");
-        rigidbody2D = GetComponent<Rigidbody2D>();
-        firePoint = transform.GetChild(0).GetChild(0);
+        shotCounter = enemyData.FireRate;
     }
 
     void Update()
@@ -46,17 +38,18 @@ public class EMaddened : Enemy
         // If found player shoot
         if (Vector3.Distance(transform.position, PlayerController.instance.transform.position) < playerRange)
         {
-
+            DebugWhenAttacked();
+            
             Vector3 playerDirection = PlayerController.instance.transform.position - transform.position; // equals -> Player's position - enemy's position
 
-            rigidbody2D.velocity = playerDirection.normalized * moveSpeed * 1f; 
+            rigidbody2D.velocity = playerDirection.normalized * enemyData.MoveSpeed * 1f; 
 
             shotCounter -= Time.deltaTime; // Countdown
             if (shotCounter <= 0)
             {
-                
                 Instantiate(bullet, firePoint.position, firePoint.rotation);
-                shotCounter = fireRate;
+                Instantiate(bullet, firePoint.position + new Vector3(.5f, 0.0f, 0.0f), firePoint.rotation);
+                shotCounter = enemyData.FireRate;
             }
             
         }
@@ -68,9 +61,10 @@ public class EMaddened : Enemy
 
     public override void TakeDamage()
     {
-        health-=3;
+        health -= 1;
         if (health <= 0)
         {
+            
             Destroy(gameObject);
             Instantiate(explosion, transform.position, transform.rotation);
             deadEnemyCount++;

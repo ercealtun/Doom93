@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager instance;
+    public static GameManager Instance;
     
     [SerializeField] private GameObject gameIsDoneScreen;
 
@@ -24,6 +25,9 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+        print("enemy: " + Enemy.deadEnemyCount);
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
 
@@ -36,17 +40,19 @@ public class GameManager : MonoBehaviour
             {
                 LockCursor();
                 tryToResume = false;
+                
             }
         }
 
-        if (Enemy.deadEnemyCount == 6)
+        switch (Enemy.deadEnemyCount)
         {
-            gameIsDoneScreen.SetActive(true);
-            Enemy.deadEnemyCount = 0;
+            case 6:
+                gameIsDoneScreen.SetActive(true);
+                Enemy.deadEnemyCount = 0;
+                break;
         }
-
-
-
+        
+        
 
     }
 
